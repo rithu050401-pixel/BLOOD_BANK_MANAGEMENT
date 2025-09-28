@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blood Bank Centers — Chennai</title>
+  <style>
+    :root{
+      --accent: #c62828;
+      --muted: #666;
+      --page-pad: 18px;
+      --max-width: 1000px;
+      --card-bg: #fff;
+      --border: #ddd;
+      --heading-font-size: 30px;
+    }
+    html,body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#f7f7f7;color:#222;}
+    .container{max-width:var(--max-width);margin:24px auto;padding:var(--page-pad);}
+    .nav{text-align:center;margin-bottom:22px;}
+    .nav a{margin:0 18px;text-decoration:none;color:var(--accent);font-weight:600;}
+    header{text-align:left;padding-bottom:12px;border-bottom:1px solid var(--border);margin-bottom:18px;}
+    header h1{margin:6px 0;font-size:24px;color:var(--accent);}
+    .center-note{font-size:18px;color:var(--muted);margin:14px 0;}
+    .bank{background:var(--card-bg);border:1px solid var(--border);padding:16px;border-radius:8px;margin:18px 0;}
+    .bank h2{margin:0 0 8px 0;font-size:var(--heading-font-size);color:#111;}
+    .bank p{margin:8px 0 12px 0;font-size:18px;line-height:1.4;color:#222;}
+    .meta{font-size:16px;color:var(--muted);margin-bottom:8px;}
+    .actions a{display:inline-block;margin-right:12px;text-decoration:none;color:#fff;background:var(--accent);padding:8px 12px;border-radius:6px;font-weight:600;}
+    table.availability{width:100%;border-collapse:collapse;margin-top:12px;display:none;border:1px solid var(--border);}
+    table.availability th, table.availability td{border:1px solid var(--border);padding:8px;text-align:left;font-size:16px;}
+    .showing {display:table;}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;padding:14px 0;}
+    @media (max-width:640px){
+      :root{--heading-font-size:22px;}
+      .nav a{display:block;margin:8px 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="blood bank.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <header>
+      <h1>CHENNAI BLOOD BANK CENTRE — LIST OF CENTERS</h1>
+      <p class="center-note">Mother's tears cannot save her child's life but your blood can. Click "View availability" for unit counts.</p>
+    </header>
+
+    <!-- Bank 1 -->
+    <section class="bank" id="bank-1">
+      <h2>1. BLOOD BANK – GOVT HOSPITAL</h2>
+      <p class="meta">No. 10, Poonamallee High Road, Chennai, Tamil Nadu 600001 — 24 HOURS — Phone: 044-25330144</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//10,+Poonamallee+High+Road,+Chennai,+Tamil+Nadu+600001" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="govt-hospital-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="govt-hospital-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>10</td></tr>
+          <tr><td>A-</td><td>5</td></tr>
+          <tr><td>B+</td><td>8</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>6</td></tr>
+          <tr><td>AB-</td><td>2</td></tr>
+          <tr><td>O+</td><td>12</td></tr>
+          <tr><td>O-</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 2 -->
+    <section class="bank" id="bank-2">
+      <h2>2. JAYALAKSHMI BLOOD BANK</h2>
+      <p class="meta">No. 17, Mambalam High Road, T. Nagar, Chennai - 600017 — 24 HOURS — Phone: 044-24346992</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//17,+Mambalam+High+Road,+T.+Nagar,+Chennai,+Tamil+Nadu+600017" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="jayalakshmi-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="jayalakshmi-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>6</td></tr>
+          <tr><td>A-</td><td>4</td></tr>
+          <tr><td>B+</td><td>9</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>2</td></tr>
+          <tr><td>AB-</td><td>1</td></tr>
+          <tr><td>O+</td><td>10</td></tr>
+          <tr><td>O-</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 3 -->
+    <section class="bank" id="bank-3">
+      <h2>3. LIFECARE BLOOD BANK</h2>
+      <p class="meta">No. 45, Poonamallee High Road, Kilpauk, Chennai - 600010 — 24 HOURS — Phone: 044-26413131</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//45,+Poonamallee+High+Road,+Kilpauk,+Chennai,+Tamil+Nadu+600010" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="lifecare-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="lifecare-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>7</td></tr>
+          <tr><td>A-</td><td>3</td></tr>
+          <tr><td>B+</td><td>6</td></tr>
+          <tr><td>B-</td><td>2</td></tr>
+          <tr><td>AB+</td><td>4</td></tr>
+          <tr><td>AB-</td><td>1</td></tr>
+          <tr><td>O+</td><td>9</td></tr>
+          <tr><td>O-</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 4 -->
+    <section class="bank" id="bank-4">
+      <h2>4. ARIGNAR ANNA BLOOD BANK</h2>
+      <p class="meta">No. 2, Poonamallee High Road, Egmore, Chennai - 600008 — 24 HOURS — Phone: 044-28190291</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//2,+Poonamallee+High+Road,+Egmore,+Chennai,+Tamil+Nadu+600008" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="arignar-anna-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="arignar-anna-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>8</td></tr>
+          <tr><td>A-</td><td>3</td></tr>
+          <tr><td>B+</td><td>7</td></tr>
+          <tr><td>B-</td><td>2</td></tr>
+          <tr><td>AB+</td><td>5</td></tr>
+          <tr><td>AB-</td><td>1</td></tr>
+          <tr><td>O+</td><td>10</td></tr>
+          <tr><td>O-</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 5 -->
+    <section class="bank" id="bank-5">
+      <h2>5. APOLLO HOSPITALS BLOOD BANK</h2>
+      <p class="meta">21, Greams Lane, Thousand Lights, Chennai - 600006 — 24 HOURS — Phone: 044-28290200</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//21,+Greams+Lane,+Thousand+Lights,+Chennai,+Tamil+Nadu+600006" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="apollo-hospitals-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="apollo-hospitals-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>9</td></tr>
+          <tr><td>A-</td><td>4</td></tr>
+          <tr><td>B+</td><td>8</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>5</td></tr>
+          <tr><td>AB-</td><td>2</td></tr>
+          <tr><td>O+</td><td>12</td></tr>
+          <tr><td>O-</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 6 -->
+    <section class="bank" id="bank-6">
+      <h2>6. GOVERNMENT GENERAL HOSPITAL BLOOD BANK</h2>
+      <p class="meta">Wallajah Road, Park Town, Chennai - 600003 — 24 HOURS — Phone: 044-25305000</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//Wallajah+Road,+Park+Town,+Chennai,+Tamil+Nadu+600003" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="govt-general-hospital-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="govt-general-hospital-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>10</td></tr>
+          <tr><td>A-</td><td>4</td></tr>
+          <tr><td>B+</td><td>6</td></tr>
+          <tr><td>B-</td><td>2</td></tr>
+          <tr><td>AB+</td><td>7</td></tr>
+          <tr><td>AB-</td><td>3</td></tr>
+          <tr><td>O+</td><td>11</td></tr>
+          <tr><td>O-</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 7 -->
+    <section class="bank" id="bank-7">
+      <h2>7. RAJIV GANDHI GOVERNMENT GENERAL HOSPITAL BLOOD BANK</h2>
+      <p class="meta">Rajiv Gandhi Government General Hospital, Poonamallee High Road, Chennai - 600003 — 24 HOURS — Phone: 044-25300100</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//Rajiv+Gandhi+Government+General+Hospital,+Poonamallee+High+Road,+Chennai,+Tamil+Nadu+600003" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="rajiv-gandhi-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="rajiv-gandhi-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>5</td></tr>
+          <tr><td>A-</td><td>3</td></tr>
+          <tr><td>B+</td><td>7</td></tr>
+          <tr><td>B-</td><td>2</td></tr>
+          <tr><td>AB+</td><td>6</td></tr>
+          <tr><td>AB-</td><td>1</td></tr>
+          <tr><td>O+</td><td>9</td></tr>
+          <tr><td>O-</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 8 -->
+    <section class="bank" id="bank-8">
+      <h2>8. MADRAS MEDICAL MISSION BLOOD BANK</h2>
+      <p class="meta">4A, Dr. J Jayalalithaa Nagar, Mogappair, Chennai - 600037 — 24 HOURS — Phone: 044-26565961</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//4A,+Dr.+J+Jayalalithaa+Nagar,+Mogappair,+Chennai,+Tamil+Nadu+600037" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="madras-medical-mission-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="madras-medical-mission-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>12</td></tr>
+          <tr><td>A-</td><td>5</td></tr>
+          <tr><td>B+</td><td>9</td></tr>
+          <tr><td>B-</td><td>4</td></tr>
+          <tr><td>AB+</td><td>8</td></tr>
+          <tr><td>AB-</td><td>3</td></tr>
+          <tr><td>O+</td><td>14</td></tr>
+          <tr><td>O-</td><td>6</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 9 -->
+    <section class="bank" id="bank-9">
+      <h2>9. ROTARY CENTRAL TTK VHS BLOOD BANK</h2>
+      <p class="meta">Rajiv Gandhi Salai, Taramani, Chennai - 600113 — 24 HOURS — Phone: 044-22541915</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//Rajiv+Gandhi+Salai,+Taramani,+Chennai,+Tamil+Nadu+600113" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="rotary-central-ttk-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="rotary-central-ttk-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>10</td></tr>
+          <tr><td>A-</td><td>4</td></tr>
+          <tr><td>B+</td><td>11</td></tr>
+          <tr><td>B-</td><td>5</td></tr>
+          <tr><td>AB+</td><td>6</td></tr>
+          <tr><td>AB-</td><td>2</td></tr>
+          <tr><td>O+</td><td>13</td></tr>
+          <tr><td>O-</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 10 -->
+    <section class="bank" id="bank-10">
+      <h2>10. GOVERNMENT ROYAPETTAH HOSPITAL BLOOD BANK</h2>
+      <p class="meta">123, Royapettah High Road, Royapettah, Chennai - 600014 — 24 HOURS — Phone: 044-28111900</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//123,+Royapettah+High+Road,+Royapettah,+Chennai,+Tamil+Nadu+600014" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="govt-royapettah-hospital-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="govt-royapettah-hospital-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>7</td></tr>
+          <tr><td>A-</td><td>3</td></tr>
+          <tr><td>B+</td><td>9</td></tr>
+          <tr><td>B-</td><td>2</td></tr>
+          <tr><td>AB+</td><td>4</td></tr>
+          <tr><td>AB-</td><td>1</td></tr>
+          <tr><td>O+</td><td>12</td></tr>
+          <tr><td>O-</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 11 -->
+    <section class="bank" id="bank-11">
+      <h2>11. SHREE VENKATESHWARA BLOOD BANK</h2>
+      <p class="meta">13/1, Muthaiah Mudali St, Korukkupet, Old Washermanpet, Chennai - 600021 — 24 HOURS — Phone: 044-25960226</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//13/1,+Muthaiah+Mudali+St,+Korukkupet,+Old+Washermanpet,+Chennai,+Tamil+Nadu+600021" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="shree-venkateshwara-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="shree-venkateshwara-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>6</td></tr>
+          <tr><td>A-</td><td>2</td></tr>
+          <tr><td>B+</td><td>8</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>5</td></tr>
+          <tr><td>AB-</td><td>1</td></tr>
+          <tr><td>O+</td><td>10</td></tr>
+          <tr><td>O-</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 12 -->
+    <section class="bank" id="bank-12">
+      <h2>12. LLMRF BLOOD BANK</h2>
+      <p class="meta">No. 23, Nungambakkam High Road, Aminjikarai, Chennai - 600029 — 24 HOURS — Phone: 917947144120</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//23,+Nungambakkam+High+Road,+Aminjikarai,+Chennai,+Tamil+Nadu+600029" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="llmrf-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="llmrf-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>7</td></tr>
+          <tr><td>A-</td><td>3</td></tr>
+          <tr><td>B+</td><td>6</td></tr>
+          <tr><td>B-</td><td>2</td></tr>
+          <tr><td>AB+</td><td>4</td></tr>
+          <tr><td>AB-</td><td>1</td></tr>
+          <tr><td>O+</td><td>9</td></tr>
+          <tr><td>O-</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 13 -->
+    <section class="bank" id="bank-13">
+      <h2>13. SREE AUROBINDO BLOOD BANK & BLOOD COMPONENTS RESEARCH CENTER</h2>
+      <p class="meta">168/1, P H Road, Kilpauk, Chennai, Tamil Nadu 600010 — 24 HOURS — Phone: 917947434605</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//168/1,+P+H+Road,+Kilpauk,+Chennai,+Tamil+Nadu+600010" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="sree-aurobindo-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="sree-aurobindo-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>8</td></tr>
+          <tr><td>A-</td><td>3</td></tr>
+          <tr><td>B+</td><td>7</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>5</td></tr>
+          <tr><td>AB-</td><td>2</td></tr>
+          <tr><td>O+</td><td>12</td></tr>
+          <tr><td>O-</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 14 -->
+    <section class="bank" id="bank-14">
+      <h2>14. ST THOMAS BLOOD BANK</h2>
+      <p class="meta">29, Butt Road, St. Thomas Mount, Chennai - 600016 — 24 HOURS — Phone: 917947435053</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//29,+Butt+Road,+St.+Thomas+Mount,+Chennai,+Tamil+Nadu+600016" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="st-thomas-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="st-thomas-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>10</td></tr>
+          <tr><td>A-</td><td>2</td></tr>
+          <tr><td>B+</td><td>8</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>6</td></tr>
+          <tr><td>AB-</td><td>2</td></tr>
+          <tr><td>O+</td><td>14</td></tr>
+          <tr><td>O-</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 15 -->
+    <section class="bank" id="bank-15">
+      <h2>15. CHENNAI BLOOD BANK</h2>
+      <p class="meta">Plot No. 2447, AF Block, 11th Main Road, Anna Nagar West, Chennai - 600040 — 24 HOURS — Phone: 08248573801</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//2447,+AF+Block,+11th+Main+Road,+Anna+Nagar+West,+Chennai,+Tamil+Nadu+600040" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="chennai-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="chennai-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>12</td></tr>
+          <tr><td>A-</td><td>5</td></tr>
+          <tr><td>B+</td><td>9</td></tr>
+          <tr><td>B-</td><td>4</td></tr>
+          <tr><td>AB+</td><td>8</td></tr>
+          <tr><td>AB-</td><td>3</td></tr>
+          <tr><td>O+</td><td>14</td></tr>
+          <tr><td>O-</td><td>6</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 16 -->
+    <section class="bank" id="bank-16">
+      <h2>16. SUGAM HOSPITAL BLOOD BANK CENTER</h2>
+      <p class="meta">108, Sundararajan Street, Purasawalkam, Chennai - 600007 — 24 HOURS — Phone: 09566154918</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//108,+Sundararajan+Street,+Purasawalkam,+Chennai,+Tamil+Nadu+600007" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="sugam-hospital-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="sugam-hospital-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>11</td></tr>
+          <tr><td>A-</td><td>4</td></tr>
+          <tr><td>B+</td><td>9</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>6</td></tr>
+          <tr><td>AB-</td><td>2</td></tr>
+          <tr><td>O+</td><td>13</td></tr>
+          <tr><td>O-</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 17 -->
+    <section class="bank" id="bank-17">
+      <h2>17. VOLUNTARY HEALTH SERVICES BLOOD BANK</h2>
+      <p class="meta">Rajiv Gandhi Salai, Taramani, Chennai - 600113 — 24 HOURS — Phone: 9884730000</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//Rajiv+Gandhi+Salai,+Taramani,+Chennai,+Tamil+Nadu+600113" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="voluntary-health-services-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="voluntary-health-services-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>14</td></tr>
+          <tr><td>A-</td><td>5</td></tr>
+          <tr><td>B+</td><td>10</td></tr>
+          <tr><td>B-</td><td>4</td></tr>
+          <tr><td>AB+</td><td>7</td></tr>
+          <tr><td>AB-</td><td>3</td></tr>
+          <tr><td>O+</td><td>15</td></tr>
+          <tr><td>O-</td><td>6</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 18 -->
+    <section class="bank" id="bank-18">
+      <h2>18. VOLUNTARY HEALTH SERVICES BLOOD BANK CENTER</h2>
+      <p class="meta">Poonamallee High Road, Park Town, Chennai - 600003 — 24 HOURS — Phone: 9884730000</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//Poonamallee+High+Road,+Park+Town,+Chennai,+Tamil+Nadu+600003" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="voluntary-health-services-2-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="voluntary-health-services-2-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>13</td></tr>
+          <tr><td>A-</td><td>4</td></tr>
+          <tr><td>B+</td><td>9</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>6</td></tr>
+          <tr><td>AB-</td><td>2</td></tr>
+          <tr><td>O+</td><td>14</td></tr>
+          <tr><td>O-</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 19 -->
+    <section class="bank" id="bank-19">
+      <h2>19. GOVERNMENT KILPAUK MEDICAL COLLEGE BLOOD BANK</h2>
+      <p class="meta">No. 5, Poonamallee High Road, Kilpauk, Chennai - 600010 — 24 HOURS — Phone: 044-28482611</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//5,+Poonamallee+High+Road,+Kilpauk,+Chennai,+Tamil+Nadu+600010" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="kilpauk-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="kilpauk-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>11</td></tr>
+          <tr><td>A-</td><td>4</td></tr>
+          <tr><td>B+</td><td>8</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>6</td></tr>
+          <tr><td>AB-</td><td>2</td></tr>
+          <tr><td>O+</td><td>12</td></tr>
+          <tr><td>O-</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bank 20 -->
+    <section class="bank" id="bank-20">
+      <h2>20. GOVERNMENT STANLEY MEDICAL COLLEGE BLOOD BANK</h2>
+      <p class="meta">No. 1, Old Jail Road, Royapuram, Chennai - 600013 — 24 HOURS — Phone: 9840053283</p>
+      <div class="actions">
+        <a href="https://www.google.com/maps/dir//1,+Old+Jail+Road,+Royapuram,+Chennai,+Tamil+Nadu+600013" target="_blank" rel="noopener">View location</a>
+        <a href="#" data-target="stanley-medical-blood-availability" class="toggle">View availability</a>
+      </div>
+      <table class="availability" id="stanley-medical-blood-availability" aria-hidden="true">
+        <thead><tr><th>Blood Group</th><th>Units Available</th></tr></thead>
+        <tbody>
+          <tr><td>A+</td><td>7</td></tr>
+          <tr><td>A-</td><td>2</td></tr>
+          <tr><td>B+</td><td>5</td></tr>
+          <tr><td>B-</td><td>3</td></tr>
+          <tr><td>AB+</td><td>1</td></tr>
+          <tr><td>AB-</td><td>0</td></tr>
+          <tr><td>O+</td><td>8</td></tr>
+          <tr><td>O-</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>List provided for demonstration — update phone numbers & units as needed.</footer>
+  </div>
+
+  <script>
+    // Toggle availability tables: show/hide and update aria-hidden for accessibility
+    document.querySelectorAll('.toggle').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        var id = btn.getAttribute('data-target');
+        var tbl = document.getElementById(id);
+        if(!tbl) return;
+        var isShown = tbl.classList.contains('showing');
+        if(isShown){
+          tbl.classList.remove('showing');
+          tbl.setAttribute('aria-hidden','true');
+          btn.textContent = 'View availability';
+        } else {
+          tbl.classList.add('showing');
+          tbl.setAttribute('aria-hidden','false');
+          btn.textContent = 'Hide availability';
+          // scroll to table on small screens
+          tbl.scrollIntoView({behavior:'smooth', block:'center'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
