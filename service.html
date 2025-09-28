@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services — Chennai Blood Bank Centre</title>
+  <style>
+    :root{
+      --accent: #c62828;
+      --bg: #f7f7f7;
+      --card: #fff;
+      --muted: #666;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--bg);
+      color:#222;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .nav{
+      text-align:center;
+      padding:18px 12px;
+      background:#fff;
+      border-bottom:1px solid #e6e6e6;
+    }
+    .nav a{
+      margin:0 12px;
+      text-decoration:none;
+      color:var(--accent);
+      font-weight:600;
+      font-size:16px;
+    }
+
+    .container{
+      max-width:980px;
+      margin:28px auto;
+      padding:18px;
+    }
+
+    header{ text-align:center; margin-bottom:18px; }
+    header h1{ margin:6px 0; font-size:28px; color:var(--accent); }
+    header p{ margin:6px 0; font-size:18px; color:var(--muted); }
+
+    .hero{
+      background:var(--card);
+      border-radius:8px;
+      padding:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.04);
+      text-align:center;
+      margin-bottom:20px;
+    }
+    .hero h2{ font-size:28px; margin:8px 0; }
+    .hero p{ font-size:18px; margin:10px 0 18px; color:#333; }
+
+    .cta{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 22px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    .steps{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+    }
+    .step{
+      background:var(--card);
+      border-radius:8px;
+      padding:16px;
+      border:1px solid #eee;
+    }
+    .step h3{ margin:0 0 8px; font-size:18px; color:var(--accent); }
+    .step p{ margin:0; color:#333; font-size:15px; }
+
+    @media (max-width:720px){
+      .steps{ grid-template-columns:1fr; }
+      header h1{ font-size:22px; }
+      .hero h2{ font-size:22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="service.html" aria-current="page">Services</a>
+    <a href="about.html">About</a>
+    <a href="donate.html">Donate</a>
+  </nav>
+
+  <main class="container">
+    <header>
+      <h1>LET'S DO THIS!</h1>
+      <p>Thank you for making one of the most important decisions that can greatly impact other people's lives. Let's get started.</p>
+    </header>
+
+    <section class="hero" aria-labelledby="make-appointment">
+      <h2 id="make-appointment">MAKE ONLINE APPOINTMENT</h2>
+      <p>Just a few clicks to save a life. Book your slot for donation and we'll take care of the rest.</p>
+      <a class="cta" href="donate.html">START HERE</a>
+    </section>
+
+    <section aria-labelledby="how-it-works">
+      <h2 id="how-it-works" style="text-align:center; font-size:22px; margin-top:8px;">BLOOD DONATION IN 4 EASY STEPS</h2>
+
+      <div class="steps" role="list">
+        <article class="step" role="listitem">
+          <h3>1. REGISTER</h3>
+          <p>Fill in basic personal details and health history so we can prepare for your donation.</p>
+        </article>
+
+        <article class="step" role="listitem">
+          <h3>2. MINI-PHYSICAL AND INTERVIEW</h3>
+          <p>A quick health check (blood pressure, hemoglobin) and a brief interview to confirm eligibility.</p>
+        </article>
+
+        <article class="step" role="listitem">
+          <h3>3. DONATION</h3>
+          <p>Typical donation takes about 8–10 minutes. Our staff will ensure your comfort and safety.</p>
+        </article>
+
+        <article class="step" role="listitem">
+          <h3>4. RELAX</h3>
+          <p>Enjoy refreshments and rest for a few minutes — stay hydrated and follow post-donation advice.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer style="margin-top:28px; text-align:center; color:var(--muted);">
+      <p>Want to learn more? Visit the About page or <a href="contact.html" style="color:var(--accent)">contact us</a>.</p>
+    </footer>
+  </main>
+
+</body>
+</html>
