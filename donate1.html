@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blood Donation Appointment — Chennai Blood Bank</title>
+  <style>
+    :root{
+      --accent: #dc3545;
+      --bg: #f8f9fa;
+      --card: #fff;
+      --muted: #666;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background-color:var(--bg);
+      color:#222;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .nav{
+      text-align:center;
+      padding:18px 12px;
+      background:#fff;
+      border-bottom:1px solid #e6e6e6;
+    }
+    .nav a{
+      margin:0 12px;
+      text-decoration:none;
+      color:var(--accent);
+      font-weight:600;
+      font-size:16px;
+    }
+
+    .page {
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+    .appointment-form{
+      background:var(--card);
+      padding:22px;
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      width:100%;
+      max-width:440px;
+    }
+    .appointment-form h2{
+      margin:0 0 12px;
+      color:var(--accent);
+      text-align:center;
+    }
+    .form-group{margin-bottom:14px;}
+    .form-group label{display:block;margin-bottom:6px;font-size:14px;}
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      width:100%;
+      padding:9px 10px;
+      border:1px solid #ddd;
+      border-radius:6px;
+      font-size:15px;
+    }
+    .form-group textarea{resize:vertical;}
+    .form-actions button{
+      background-color:var(--accent);
+      color:#fff;
+      border:0;
+      padding:10px 12px;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:16px;
+      width:100%;
+    }
+    .form-actions button:hover{opacity:0.95}
+    .note{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
+    .error-message{font-size:13px;color:red;margin-top:4px;}
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="donate.html">Donate</a>
+    <a href="donate1.html">Book Appointment</a>
+  </nav>
+
+  <main class="page">
+    <form class="appointment-form" action="/submit_appointment" method="post">
+      <h2>Blood Donation Appointment</h2>
+
+      <div class="form-group">
+        <label for="fullName">Full name *</label>
+        <input id="fullName" name="fullName" type="text" required />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age (must be 18+) *</label>
+        <input id="age" name="age" type="number" min="18" required />
+      </div>
+
+      <div class="form-group">
+        <label for="bloodGroup">Blood group *</label>
+        <select id="bloodGroup" name="bloodGroup" required>
+          <option value="">Select</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone number *</label>
+        <input id="phone" name="phone" type="tel" placeholder="10-digit number" required />
+        <span class="error-message" id="phoneError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address *</label>
+        <input id="email" name="email" type="email" required />
+        <span class="error-message" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="appointmentDate">Preferred appointment date *</label>
+        <input id="appointmentDate" name="appointmentDate" type="date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional comments</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Book appointment</button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    // Prevent selecting past dates
+    const dateInput = document.getElementById('appointmentDate');
+    if(dateInput){
+      const today = new Date();
+      const y = today.getFullYear();
+      const m = String(today.getMonth()+1).padStart(2,'0');
+      const d = String(today.getDate()).padStart(2,'0');
+      dateInput.min = y + '-' + m + '-' + d;
+    }
+
+    // Real-time email and phone validation
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const emailError = document.getElementById('emailError');
+    const phoneError = document.getElementById('phoneError');
+    const form = document.querySelector('.appointment-form');
+
+    // Regex patterns
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^\d{10}$/; // 10 digits
+
+    // Email validation
+    emailInput.addEventListener('input', () => {
+      if(!emailPattern.test(emailInput.value)){
+        emailError.textContent = "Invalid email!";
+      } else {
+        emailError.textContent = "";
+      }
+    });
+
+    // Phone validation
+    phoneInput.addEventListener('input', () => {
+      if(!phonePattern.test(phoneInput.value)){
+        phoneError.textContent = "Invalid phone number!";
+      } else {
+        phoneError.textContent = "";
+      }
+    });
+
+    // Prevent form submission if invalid
+    form.addEventListener('submit', (e) => {
+      if(!emailPattern.test(emailInput.value) || !phonePattern.test(phoneInput.value)){
+        e.preventDefault();
+        alert("Please fix errors before submitting.");
+      }
+    });
+  </script>
+
+</body>
+</html>
